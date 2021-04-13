@@ -1,4 +1,6 @@
 # LLVM 10.0.0 and 10.0.1 had issues with aarch64
+# LLVM 11.* too
+# See also: https://bugs.llvm.org/show_bug.cgi?id=46996
 {% if aarch64 %}
 
 {% set shortversion = "9.0" %}
