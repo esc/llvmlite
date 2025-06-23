@@ -232,7 +232,8 @@ def main_posix(kind, library_ext):
 
     makefile = "Makefile.%s" % (kind,)
     try:
-        default_makeopts = "-j%d" % (multiprocessing.cpu_count(),)
+        #default_makeopts = "-j%d" % (multiprocessing.cpu_count(),)
+        default_makeopts = "-j1"
     except NotImplementedError:
         default_makeopts = ""
     makeopts = os.environ.get('LLVMLITE_MAKEOPTS', default_makeopts).split()
